@@ -6,8 +6,9 @@ KREWES = {
 }
 
 def randstudent(crew):
-    team = crew[random.randrange(0,len(crew))]
-    student = team[random.randrange(0,len(team))]
+    teams = crew.keys()
+    team = teams[random.randrange(0,len(crew))]
+    student = crew[team][random.randrange(0,len(crew[team]))]
     return student
 
 def main():

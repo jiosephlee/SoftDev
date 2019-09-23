@@ -5,7 +5,10 @@
     </head>
 
     <body>
-
+        {% for key, value in dict_jobs.items() %}
+        <dt>{{ key|e }}</dt>
+        <dd>{{ value|e }}</dd>
+        {% endfor %}
     </body>
 
 </html>

@@ -24,7 +24,7 @@ def occ_template():
     data = open("jobs.csv").read().split("\n")
     #Strip the File so it's only the inner data
     data = data[1:len(data)-2]
-    #Loop through the array, split it by comma,
+    #Loop through the array, split it by comma, and put it into the dictionary
     for item in data:
         input = item.rsplit(",",1)
         dict[input[0].replace('\"','')] = float(input[1])

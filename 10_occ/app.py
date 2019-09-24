@@ -30,7 +30,7 @@ def occ_template():
         dict[input[0].replace('\"','')] = float(input[1])
     csv.close()
     #Choose a random item in the dict
-    threshold = float(random.randint(1,100))
+    threshold = random.uniform(1,100)
     random_occ = ""
     for item in dict:
         value = dict[item]

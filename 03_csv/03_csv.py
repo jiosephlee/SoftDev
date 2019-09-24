@@ -1,7 +1,7 @@
 import random
 
 def randomizer(dict):
-    threshold = float(random.randint(1,100))
+    threshold = float(random.uniform(0.1,100))
     for item in dict:
         value = dict[item][0]
         if (threshold - value <= 0):

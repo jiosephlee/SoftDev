@@ -6,14 +6,13 @@ admin_pw = "girls"
 @app.route('/')
 def index():
     if 'user' in session:
-       return redirect(url_for('welcome'))
+       return redirect(url_for('welcome',user = session['user']))
     else:
         return render_template("form.html")
 
 @app.route('/welcome')
 def welcome():
-    return render_template("welcome.html")
-
+    return render_template("welcome.html",user=session['user'])
 
 @app.route('/auth', methods=['get'])
 def checklogin():
@@ -23,7 +22,7 @@ def checklogin():
     if username == admin_user and password == admin_pw:
         session['user'] = username
         flash('You were successfully logged in')
-        return redirect(url_for('index'))
+        return redirect(url_for('welcome',user=session['user']))
     else:
         error = 'Invalid credentials'
         return render_template("form.html",error = error)
@@ -32,6 +31,7 @@ def checklogin():
 def logout():
     # remove the username from te session if it's there
     session.pop('user', None)
+    flash('You were successfully logged out')
     return redirect(url_for('index'))
 if __name__ == "__main__":
     app.debug = True

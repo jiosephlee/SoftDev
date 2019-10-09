@@ -1,7 +1,7 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev  
-#skeleton :: SQLITE3 BASICS
-#Oct 2019
+#Team Maz Hatters - Joseph Lee and Eric Lau
+#SoftDev1 pd1
+#K17 -- No Trouble
+#2019-10-10
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -14,15 +14,19 @@ c = db.cursor()               #facilitate db ops
 
 #==========================================================
 
-# < < < INSERT YOUR POPULATE-THE-DB CODE HERE > > >
+def to_table(data):
+    table = data[:-4]
+    with open(data,'r',newline='') as file:
+        reader = csv.DictReader(file)
+        headers = reader.fieldnames
+        c.execute('CREATE TABLE '+table+' ('+headers[0]+' text, '+headers[1]+' numeric, '+headers[2]+' numeric);')
+        for row in reader:
+            c.execute('INSERT INTO '+table+' VALUES (\''+row.get(headers[0])+'\', '+row.get(headers[1])+', '+row.get(headers[2])+');')
 
-
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+to_table('courses.csv')
+to_table('students.csv')
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-

@@ -1,59 +1,55 @@
-<!doctype html>
+<!-- UncommonApp: Amanda "Amber" Chen -->
+<!-- SoftDev1 pd1 -->
+<!-- K22 - Who Does Frame Work For? -->
+<!-- 2019-11-04 -->
+
+<!DOCTYPE HTML>
 <html class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
+    <title>Simple Foundation Tutorial</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css">
   </head>
   <body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">This is a Top Bar</li>
+          <li><a href="#">You</a></li>
+          <li><a href="#">Can</a></li>
+          <li><a href="#">Add</a></li>
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Links</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
-          <h1>Welcome to Foundation</h1>
-        </div>
-      </div>
-
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <div class="callout">
-            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-            <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-            <p>Once you've exhausted the fun in this document, you should check out:</p>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-              </div>
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-              </div>
-              <div class="large-4 medium-4 cell">
-                <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowledge.</p>
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 medium-push-2 cell">
-                <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-              </div>
-              <div class="large-4 medium-4 medium-pull-2 cell">
-                <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-              </div>
-            </div>
-          </div>
+          <h1>Welcome To A Simple Foundation Tutorial</h1>
         </div>
       </div>
 
       <div class="grid-x grid-padding-x">
         <div class="large-8 medium-8 cell">
-          <h5>Here&rsquo;s your basic grid:</h5>
+          <h5>Here&rsquo;s a basic grid system:</h5>
           <!-- Grid Example -->
 
           <div class="grid-x grid-padding-x">
             <div class="large-12 cell">
               <div class="primary callout">
-                <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
+                <p class="text-justify"><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
               </div>
             </div>
           </div>
@@ -65,7 +61,7 @@
             </div>
             <div class="large-6 medium-6 cell">
               <div class="primary callout">
-                <p>Six cell</p>
+                <p class="text-right">Six cell</p>
               </div>
             </div>
           </div>
@@ -77,40 +73,63 @@
             </div>
             <div class="large-4 medium-4 small-4 cell">
               <div class="primary callout">
-                <p>Four cell</p>
+                <p class="text-center">Four cell</p>
               </div>
             </div>
             <div class="large-4 medium-4 small-4 cell">
               <div class="primary callout">
-                <p>Four cell</p>
+                <p class="text-right">Four cell</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-x grid-padding-x">
+            <div class="large-5 medium-5 small-5 cell">
+              <div class="primary callout">
+                <p class="text-center">Five cell</p>
+              </div>
+            </div>
+            <div class="large-3 medium-3 small-3 cell">
+              <div class="primary callout">
+                <p class="text-center">Three cell</p>
+              </div>
+            </div>
+            <div class="large-2 medium-2 small-2 cell">
+              <div class="primary callout">
+                <p class="text-center">Two cell</p>
+              </div>
+            </div>
+            <div class="large-2 medium-2 small-2 cell">
+              <div class="primary callout">
+                <p class="text-center">Two cell</p>
               </div>
             </div>
           </div>
 
           <hr />
 
-          <h5>We bet you&rsquo;ll need a form somewhere:</h5>
+          <h5>Creating forms with multiple inputs:</h5>
           <form>
             <div class="grid-x grid-padding-x">
               <div class="large-12 cell">
-                <label>Input Label</label>
+                <label>Large Field</label>
                 <input type="text" placeholder="large-12.cell" />
               </div>
             </div>
             <div class="grid-x grid-padding-x">
               <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
+                <label>Small Field</label>
                 <input type="text" placeholder="large-4.cell" />
               </div>
               <div class="large-4 medium-4 cell">
-                <label>Input Label</label>
+                <label>Small Field</label>
                 <input type="text" placeholder="large-4.cell" />
               </div>
               <div class="large-4 medium-4 cell">
                 <div class="grid-x">
-                  <label>Input Label</label>
+                  <label>Small Field with Label</label>
                   <div class="input-group">
-                    <input type="text" placeholder="small-9.cell" class="input-group-field" />
+                    <input type="text" placeholder="large-9.cell" class="input-group-field" />
                     <span class="input-group-label">.com</span>
                   </div>
                 </div>
@@ -120,52 +139,162 @@
               <div class="large-12 cell">
                 <label>Select Box</label>
                 <select>
-                  <option value="husker">Husker</option>
-                  <option value="starbuck">Starbuck</option>
-                  <option value="hotdog">Hot Dog</option>
-                  <option value="apollo">Apollo</option>
+                  <option value="husker">None</option>
+                  <option value="husker">Apple</option>
+                  <option value="starbuck">Orange</option>
+                  <option value="hotdog">Banana</option>
+                  <option value="apollo">Watermelon</option>
                 </select>
               </div>
             </div>
             <div class="grid-x grid-padding-x">
               <div class="large-6 medium-6 cell">
-                <label>Choose Your Favorite</label>
+                <label>Radio Buttons</label>
                 <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
                 <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
               </div>
               <div class="large-6 medium-6 cell">
-                <label>Check these out</label>
+                <label>Checkboxes</label>
                 <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
                 <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
               </div>
             </div>
             <div class="grid-x grid-padding-x">
               <div class="large-12 cell">
-                <label>Textarea Label</label>
-                <textarea placeholder="small-12.cell"></textarea>
+                <label>Textarea Field</label>
+                <textarea placeholder="large-12.cell"></textarea>
               </div>
             </div>
           </form>
         </div>
 
+
         <div class="large-4 medium-4 cell">
-          <h5>Try one of these buttons:</h5>
-          <p><a href="#" class="button">Simple Button</a><br/>
-          <a href="#" class="success button">Success Btn</a><br/>
-          <a href="#" class="alert button">Alert Btn</a><br/>
-          <a href="#" class="secondary button">Secondary Btn</a></p>
+          <br>
+
+          <!-- Links to Documentation -->
           <div class="callout">
-            <h5>So many components, girl!</h5>
-            <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-            <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
+            <h5>Additional References:</h5>
+            <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+            <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
+            <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowledge.</p>
+            <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
           </div>
+
+          <hr><br>
+
+          <!-- Buttons -->
+          <h5>Colored Buttons:</h5>
+          <p><a href="#" class="button">Simple Button</a><br/>
+          <a href="#" class="success button">Success Button</a><br/>
+          <a href="#" class="alert button">Alert Button</a><br/>
+          <a href="#" class="secondary button">Secondary Button</a></p>
+
         </div>
       </div>
     </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <hr>
+
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <!-- CALLOUTS -->
+        <div class="large-12 medium-12 cell">
+          <h5>Colored Callouts:</h5>
+        </div>
+        <div class="large-4 medium-4 cell">
+          <div class="callout"><p class="text-center">This is an example of a callout</p></div>
+        </div>
+        <div class="large-4 medium-4 cell">
+          <div class="callout secondary"><p class="text-center">This is an example of a secondary callout</p></div>
+        </div>
+        <div class="large-4 medium-4 cell">
+          <div class="callout success"><p class="text-center">This is an example of a success callout</p></div>
+        </div>
+        <div class="large-6 medium-6 cell">
+          <div class="callout warning"><p class="text-center">This is an example of a warning callout</p></div>
+        </div>
+        <div class="large-6 medium-6 cell">
+          <div class="callout alert"><p class="text-center">This is an example of an alert callout</p></div>
+        </div>
+      </div>
+
+      <hr>
+      <!-- PROGRESS BARS -->
+      <h5>Colored Progress Bars:</h5>
+      <div class="success progress" role="progressbar">
+        <div class="progress-meter" style="width: 25%">
+          <p class="progress-meter-text">25%</p>
+        </div>
+      </div>
+
+      <div class="alert progress" role="progressbar">
+        <div class="progress-meter" style="width: 98%">
+          <p class="progress-meter-text">98%</p>
+        </div>
+      </div>
+
+      <div class="warning progress" role="progressbar">
+        <div class="progress-meter" style="width: 75%">
+          <p class="progress-meter-text">75%</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+
+          <!-- LABELS -->
+          <div class="large-5 medium-5 cell">
+            <h5>Colored Labels:</h5>
+        		<span class="secondary label">Secondary Label</span>
+        		<span class="success label">Success Label</span>
+        		<span class="alert label">Alert Label</span>
+        		<span class="warning label">Warning Label</span>
+          </div>
+
+          <!-- BADGES -->
+          <div class="large-3 medium-3 cell">
+            <h5>Colored Badges:</h5>
+        		<span class="secondary badge">L</span>
+        		<span class="success badge">5</span>
+        		<span class="alert badge">3</span>
+        		<span class="warning badge">B</span>
+          </div>
+
+          <!-- BREADCRUMBS -->
+          <div class="large-4 medium-4 cell">
+            <h5>Breadcrumbs:</h5>
+            <nav role="navigation">
+              <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li class="disabled">Disabled</li>
+                <li><a href="#">Posts</a></li>
+                <li>My Post</li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- PAGINATION -->
+      <h5 class="text-center">Page Navigation:</h5>
+      <ul class="pagination text-center" role="navigation">
+        <li class="disabled">Previous</li>
+        <li class="current">1</li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li class="ellipsis"></li>
+        <li><a href="#">13</a></li>
+        <li><a href="#">14</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </div>
+
   </body>
 </html>

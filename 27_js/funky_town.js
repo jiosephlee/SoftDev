@@ -1,6 +1,7 @@
-var food = function(n){
-	print("foo");
-};
+//Team SDU - Joseph Lee & Vishwaa Sofat
+//SoftDev1 pd1
+//K27 -- Sequential Progression
+//2019-12-10
 
 
 var fact = function(n){
@@ -12,10 +13,10 @@ var fact = function(n){
 }
 
 var fib = function(n){
-    if (n = 0){
+    if (n == 0){
         return 0;
     }
-    if (n = 1){
+    else if (n == 1){
         return 1;
     }
     else{
@@ -23,17 +24,28 @@ var fib = function(n){
     }
 }
 
-var GCD = function (a,b){
-    var big;
+var gcd = function (a,b){
+    var small;
     if (a < b){
-        big = b;
+        small = a;
     }
     else{
-        big = a;
+        small = b;
     }
-    var ind;
-    for (ind = 0; ind < )
+    var i;
+		var ans;
+    for (i = 0; i < b; i++){
+		 		if (a%i == 0 && b%i == 0){
+						ans = i;
+				}
+		}
+		return ans;
 }
 
--- randStudent
-console.log(fib(3))
+var randStudent = function (list){
+		return list[Math.floor(Math.random()*list.length)];
+}
+console.log(fib(6));
+console.log(gcd(12,9));
+var cars = ["Saab", "Volvo", "BMW"];
+console.log(randStudent(cars));

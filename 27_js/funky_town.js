@@ -3,7 +3,6 @@
 //K27 -- Sequential Progression
 //2019-12-10
 
-
 var fact = function(n){
     if (n < 2){
         return 1;}

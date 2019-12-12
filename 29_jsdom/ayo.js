@@ -1,3 +1,7 @@
+//Team ____ - Joseph Lee & Yaru Lao
+//SoftDev1 pd1
+//K29 -- Sequential Progression III: Season of the Witch
+//2019-12-12
 var index = 0;
 var fibbutton = document.getElementById("fb");
 fibbutton.addEventListener("click", () => addFib(index));

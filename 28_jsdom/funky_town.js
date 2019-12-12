@@ -1,7 +1,7 @@
-//Team SDU - Joseph Lee & Emory Walsh
+//Team Funkey Monkey - Joseph Lee & Emory Walsh
 //SoftDev1 pd1
-//K27 -- Sequential Progression
-//2019-12-10
+//K28 -- Sequential Progression II: Electric Boogaloo
+//2019-12-11
 
 
 var fact = function(n){

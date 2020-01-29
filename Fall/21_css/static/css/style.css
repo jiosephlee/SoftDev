@@ -1,0 +1,39 @@
+body{
+  background-color: #D1E3FA;
+  text-align: center;
+  font-family: Georgia;
+}
+
+h1 {
+  color: #79A1D5;
+}
+
+h2 {
+  color: #B2AAEF;
+}
+
+form {
+  color: #8A81DA;
+}
+
+input {
+  font-family: Georgia;
+  color: #70D5BC;
+}
+
+ol {
+  color: #B2AAEF;
+}
+
+span {
+  color: #8A81DA;
+}
+
+textarea {
+  font-family: Georgia;
+  color: #70D5BC
+}
+
+p {
+  color: #8A81DA;
+}

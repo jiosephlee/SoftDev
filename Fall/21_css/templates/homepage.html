@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block header %}
+  {% block title %}
+    <title> Home Page </title>
+  {% endblock %}
+{% endblock %}
+{% block content %}
+  <h1>Welcome {{ user }} !<h1>
+  <h2>STORIES</h2>
+  <ol>
+  {% for element in storyName %}
+    <li>
+      <a href="read/{{element}}">{{element}}</a>
+    </li>
+  {% endfor %}
+  </ol>
+  <h2>ADD TO STORIES</h2>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% if messages %}
+        <h2> {{ messages[0] }} </h2>
+      {% endif %}
+    {% endif %}
+  {% endwith %}
+  <ol>
+  {% for element in storyAdd %}
+    <li>
+      <a href="add/{{element}}">{{element}}</a>
+    </li>
+  {% endfor %}
+  </ol>
+  <br>
+  <form action = "/create">
+    <input type = "submit" name = "makenew" value = "Create new story">
+  </form>
+  <form action = "/logout">
+    <input type = "submit" name = "sub3" value = "logout">
+  </form>
+{% endblock %}
+{% block footer %}
+{% endblock %}

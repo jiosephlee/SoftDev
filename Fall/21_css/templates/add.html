@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block header %}
+  {% block title %}
+    <title> {{name}} </title>
+  {% endblock %}
+{% endblock %}
+{% block content %}
+  <h1>Latest Edit: </h1>
+  <span>{{story}}<span>
+  <br><br>
+  <form action = "/addToStory", method = "POST">
+    <textarea name = "addition" rows = "10" cols = "50"> </textarea><br>
+    <input type = "submit" name = "sub4" value = "Submit">
+  </form>
+  <form action = "/home", method = "GET">
+    <input type = "submit" name = "cancel" value = "Return home">
+  </form>
+{% endblock %}
+{% block footer %}
+{% endblock %}

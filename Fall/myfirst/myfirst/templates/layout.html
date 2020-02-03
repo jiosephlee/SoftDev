@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block header %}
+        <title>Welcome</title>
+        <h1>Welcome {{user}}</h1>
+    {% endblock %}
+  </head>
+  <title>My Application</title>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    {% endwith %}
+    {% block body %}
+    {% endblock %}
+    {% block footer %}
+        <br>
+        &copy; Copyright Joseph Lee & Raymond Lee 2019
+    {% endblock %}
+  </body>
+</html>

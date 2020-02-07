@@ -1,4 +1,7 @@
-
+// Joseph Lee and David Sontag -- Team Red
+// SoftDev1 pd1
+// K05 -- ...and I want to Paint It Better
+// 2020-02-07
 const canvas = document.getElementById('slate');
 const ctx = canvas.getContext('2d');
 

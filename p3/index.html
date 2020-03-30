@@ -1,0 +1,414 @@
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    p{
+      padding: 1px
+    }
+    title{
+
+    }
+    </style>
+</head>
+<div class = "container">
+  <br>
+  <br>
+<h3 dir="ltr">
+    The Physics of CSS
+</h3>
+<p dir="ltr">
+    CSS is essentially mapping HTML elements to rectangular boxes that can be
+    positioned on the x-, y- and z-axis.
+</p>
+<p dir="ltr">
+    There is a single place these HTML elements usually live in: the normal
+    flow. Elements in the normal flow are born as inline, block elements, or
+    not displayed. Not displayed elements are those like meta tags or style
+    tags which aren’t visually rendered by the browser. However, HTML elements
+    can also be born outside of the normal flow, and interact with the normal
+    flow in their own way: like floats, relative elements, and fixed elements.
+    Let’s take a look at inline and block elements.
+</p>
+<h3>
+    Inline vs. Block
+</h3>
+<p dir="ltr">
+    Every HTML element has three different states: Block, Inline or not
+    displayed.
+</p>
+<p dir="ltr">
+    A block level element will naturally span the entire available width,
+    without concern about how much horizontal space it actually needs. As a
+    result of that, a block level element will automatically push following
+    content to a new line, so by default, two block level elements can't stand
+    next to each other - the first will push the second one to the next line
+    (floating elements will allow this though, but more on that later).
+</p>
+<p dir="ltr">
+    However, an inline element does not break the current flow. An inline
+    element only takes up the space it needs to render its content and after
+    that, more inline elements can be displayed.
+</p>
+<p dir="ltr">
+    A good way to remember the difference is to think of an inline element as a
+    line of text/sentence and a block level element as a paragraph - the
+    sentence can stand together with other sentences to form an entire
+    paragraph, but the paragraph breaks the natural flow to create space around
+    it.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh3.googleusercontent.com/Ic0_t6-hwLeU7qPLkYHy5sXOj-6XI8oSxt2cc5alpd1JalPfaYPt7T6Q9EkjAJUmrht4QKkhjU1_VE_1ML38JMS22gTSgPgpZ2UShN8XuRKbDxQjyTJFxq9i9ENPR5Fije3xHja1"
+        width="624"
+        height="83"
+    />
+</p>
+<p dir="ltr">
+    An example of inline elements include span tags (the generic inline
+    element), links (anchors), images and form fields like input. Common block
+    level elements include div tags (the generic block level element), header
+    tags (h1-h6), paragraphs, lists and tables.
+</p>
+<p dir="ltr">
+    Another important fact is that width and height properties are ignored for
+    inline elements. Instead, you can use the line-height property to make an
+    inline element smaller or bigger, as the space between each line grows or
+    shrinks.
+</p>
+<p dir="ltr">
+    You will also see margins and paddings acting differently than you might be
+    used to, when applied to inline elements. In general, if you need to create
+    space between or inside elements, you may want to use a block level element
+    instead. If you're trying to use inline elements because you want two or
+    more elements to stand next to each other, then a floating block level
+    element might be more suitable.
+</p>
+<h3 dir="ltr">
+    Outline vs. Borders
+</h3>
+<p dir="ltr">
+    While most HTML elements don't have a border by default, CSS does support
+    the feature, with a range of border related properties.
+</p>
+<h5 dir="ltr">
+    Border color
+</h5>
+<p dir="ltr">
+    As per usual.
+</p>
+<h5 dir="ltr">
+    Border width
+</h5>
+<p dir="ltr">
+    The width can be either an absolute value, a relative value, or one of the
+    pre-defined border width values: Thin, medium or thick. If you use the
+    pre-defined values, it's up to the browser to interpret them, which
+    basically gives you less control of how your work will look across all the
+    different devices and browsers.
+</p>
+<h5 dir="ltr">
+    Border style
+</h5>
+<p dir="ltr">
+    For style, you have a range of options. The most commonly used is the solid
+    border, but there are many more to choose from: hidden, dotted, dashed,
+    solid, double, groove, ridge, inset and outset.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh5.googleusercontent.com/pGRfLGylVUjg_Vr_yZimVhr3mAHjz4dV2N8up1Bg8_fGOWYzKRlb-pRdMONIcinY2KrdBsBAu3Xsu1oJyikZjqHbzScHxNRdXI1tVz-5z-i4CTDONLSxZyNEZNYx8V3s_bAv97vJ"
+        width="624"
+        height="152"
+    />
+</p>
+<h5 dir="ltr">
+    Border radius
+</h5>
+<p dir="ltr">
+    The ability to define border radius was added in CSS3, providing the
+    possibility to make rounded corners. In terms of syntax, they’re four slots
+    but the first one begins with the top-left and goes around clockwise. Like
+    other properties, you can simplify the four slots to two slots or even one.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh5.googleusercontent.com/B6hsSXp6N-zE7slaXznjDBGQITDOXXnPZ1kl956Qi5B3HQUTaaWPZ4OJ6KzdwpkKfGUsHrLAj0pe0xwgyyqS6bOaTqnZl6aDZ0eCTjYXFxnR6GZc6gPeJHEqxE0X0Bv3I4y0I5Tn"
+        width="624"
+        height="101"
+    />
+</p>
+<h5 dir="ltr">
+    Difference Between Borders and Outlines
+</h5>
+<p dir="ltr">
+    They look identical, however, they are a few key differences. You cannot
+    apply a different outline width, style and color for the four sides of an
+    element, like you can with the border - the values provided will be used
+    for all four sides of the element.
+</p>
+<p dir="ltr">
+    In addition, the outline is not a part of the element's dimensions, like
+    the border is, meaning that no matter how thick an outline you apply to the
+    element, the dimensions of it won't change. This also means that the
+    browser won't reserve the required space for your outline - you will need
+    to make sure that it can fit it, without overlapping other elements.
+</p>
+<p dir="ltr">
+    Thus, it is not a feature that’s commonly used, however, it does have one
+    unique feature that may come in handy.
+</p>
+<h5 dir="ltr">
+    Outline offset
+</h5>
+<p dir="ltr">
+    A cool thing about outlines is that you can create a distance between it
+    and the border, if you want to, by using the outline-offset property. It
+    takes a CSS length unit and the empty space between the border (if there is
+    any) and the outline will be transparent and thereby take the background
+    color of the parent element. Here's an example:
+</p>
+<p dir="ltr">
+    However, the support for this property is currently a bit limited. As of
+    writing, it is for instance not supported by any version of Internet
+    Explorer, but support will likely be added in an upcoming version.
+    <br>
+    <img
+        src="https://lh5.googleusercontent.com/mC-kqwNjtTEPIrRXmuuIJz22M7sK3udz5Gl3aFtX8f_cdDTNYcGnAX07bqWGU1kNFxeThCNji6IWjh9nmIpOQXZPZXZ0po4DYb4mpGG-MsB_YI9ZP27b-kebMRee4PAANqWKV7RZ"
+        width="624"
+        height="109"
+    />
+</p>
+<h3 dir="ltr">
+    Visibility vs. Display
+</h3>
+<p dir="ltr">
+    CSS has two properties used to control visibility: The visibility property
+    and the display property. They are used in different situations and act
+    differently in several ways.
+</p>
+<h5 dir="ltr">
+    Visibility
+</h5>
+<p dir="ltr">
+    The initial value of the visibility property is visible, simply meaning
+    that the element is visible unless you change it - that makes sense. Now
+    try out this example:
+    <img
+        src="https://lh3.googleusercontent.com/NcdlkBqJAKSIxQoszbyTQU5bE7yYlwjy_DcWKCsXjkpioIZ5-PzJkG3IRvCYcAO2enSS2Xg2YMix6QblJ-xCN6E3CDQjoEm0a-HIvdYQej41fDP9fa1k3wmxEfZqzoZtc_auodVk"
+        width="624"
+        height="281"
+    />
+</p>
+<p dir="ltr">
+    Three boxes but the middle one has been made invisible by setting the
+    visibility property to hidden. If you try the example, you will notice one
+    very important thing: While the second box is not there, it does leave a
+    pretty big hole in the page. Or in other words: The element can't be seen,
+    but the browser still reserves the space for it!
+</p>
+<p dir="ltr">
+    This is one of the most important differences between the visibility
+    property and the display property - elements hidden with the visibility
+    property still affects layout as if it was visible, sort of like a
+    completely transparent element, while elements hidden by the display
+    property don't (the browser will treat it as if it wasn't there).
+</p>
+<h5 dir="ltr">
+    Display
+</h5>
+<p dir="ltr">
+    Instead of the visibility property, let’s use the display property this
+    time.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh3.googleusercontent.com/dO1hC5rHzEboMpFbfEcML0wAcV5VI6nD2Ts9n57m0toucYUubnggGZ63_EXL4yuSbDxMmhahIuJxI6oOpkNCcGKea8Blq3313z-jGqD9ujrG1g5L1fstnq3-hwQ1t3QgaaiLBRPa"
+        width="624"
+        height="157"
+    />
+</p>
+<p dir="ltr">
+    The second box has vanished without a trace, when we used the none value
+    for the display property.
+</p>
+<h3 dir="ltr">
+    Margins vs. Padding
+</h3>
+<p dir="ltr">
+    <img
+        src="https://lh5.googleusercontent.com/oAX19KX1YSuMWNZZNQb5hdlWeej_tw5ZbvwMM1WVpYVKDdBTnIXlKz5xNWdk0U_KSEZsOAasLnpjjbtjf11qsPaLdqbr-NkINSnetoRYNXIPCvtF8c-0TJUoetygU0H09KM4-X-6"
+        width="275"
+        height="154"
+    />
+</p>
+<p dir="ltr">
+    Margins are used to ensure an element has a certain amount of space
+    separating it from other elements. Think about it like an outer, invisible
+    border. The margins of two elements can “overlap,” but in the case that it
+    happens, the distance between them will be the greatest of each’s margin.
+</p>
+<p dir="ltr">
+    The default value for the margin properties is auto, which usually means no
+    margin. Some elements, such as headers, body tags and paragraphs may have
+    margins added by the browser. This, of course, can be overridden by setting
+    margins to zero.
+</p>
+<p dir="ltr">
+    You can also have relative and negative margins. Using a combination of
+    negative and positive values for the margin property is a common strategy
+    to adjust the position and compensate for the padding in the parent
+    element.
+</p>
+<p dir="ltr">
+    Padding is similar to margins, but on the inside of the element. In other
+    words, padding is an inner, invisible border around your element.
+</p>
+<p dir="ltr">
+    By default, most block level elements have zero padding, meaning that text
+    and other content will go all the way to the edge of the parent element, as
+    seen below.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh4.googleusercontent.com/l7dciNPArl_WRtYl4UQWeNOHTuGZ6R8EKLrRZxB570fXyIdV5x_mH_wRgYD4gyhPwGlr22LMQqpf4NN0GivJNvQ3uJ5KLvAe9aJQwU2vbXG7LuOVsi76VlpTrWzP9c7lzkEr09dY"
+        width="624"
+        height="96"
+    />
+</p>
+<p dir="ltr">
+    However, with a little bit of padding
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh4.googleusercontent.com/DwnNPP8Az2TkDHwFgpCwCcvzr8Q3gELVUlnB6gvDicuNJbLTHX71hXZqYX8PPf5uoNpieniuCa_sipsYah4O4sL6pK36Mb4ZDoS35q-X7KeKgXosYFL26PB6883cqMmbxThnqWlH"
+        width="624"
+        height="119"
+    />
+</p>
+<h3 dir="ltr">
+    Positioning
+</h3>
+<p dir="ltr">
+    While HTML elements have properties, they also need to be positioned.
+</p>
+<p dir="ltr">
+    By default, elements are laid out with static positioning. This means
+    elements are placed from top to bottom, with specified margins on the
+    element and elements around it.
+</p>
+<p dir="ltr">
+    Relative positioning places an object relative to its default static
+    position by using top, bottom, left, and right properties. Content around
+    relatively positioned elements will not adjust to gaps or overlap created.
+</p>
+<p dir="ltr">
+    Fixed positioning positions an element relative to the browser window, and
+    does not leave a gap in the normal flow of a page. Fixed elements are also
+    placed using the top, bottom, left and right properties.
+</p>
+<p dir="ltr">
+    Absolute positioning places an element relative to the entire webpage, or
+    within the confines of a non-static ancestor if one exists. Absolute
+    positioning uses the same top, bottom, left and right properties.
+</p>
+<p dir="ltr">
+    Lastly, sticky positioning allows an object to transition from relative
+    positioning to fixed positioning based on a user scrolling through a
+    webpage. At least one offset must be specified for sticky positioning to
+    work.
+</p>
+<p dir="ltr">
+    <img
+        src="https://lh5.googleusercontent.com/YCZVrmdSxaVq6owBh1xrtfYpybTRl69sus7iHdTi0WekNKQvXsh23RsrWput9-CBktrKlj_w-Lmi_fJ8zGTBmVdlARz4jVPDbX3uFNsYUaHCNMe7a6hPf0Q6a1Xwx03Rj2y4ZsUB"
+        width="624"
+        height="281"
+    />
+</p>
+<h3 dir="ltr">
+    Syntax
+</h3>
+<h5 dir="ltr">
+    Defining Properties
+</h5>
+<p dir="ltr">
+    Syntax has been mentioned a few times, so let’s recap. When defining
+    specific properties, for most of them, HTML provides up to four slots of
+    information, starting with top and going around clockwise. For example,
+    border-style: border-top-style, border-right-style, border-bottom-style and
+    border-left-style.
+    <img
+        src="https://lh4.googleusercontent.com/ObIILPcge-ZttKvRGYggrMM5vPaL79uke1Z-5Nyaq0XA52eAn3_KN_7EmB78TCKdoN34L8hGKoQOmZUUj7G-bUDzkNYbQEQlzqseUjoS1icdoOByHhZCkFwWtapOp5tS9ntjPEa0"
+        width="624"
+        height="111"
+    />
+    This pattern of top, right, bottom, and left is consistent with other
+    properties, where each slot affects a side of the block element. However,
+    much of the time, programmers use two slots or a single slot. In the case
+    of a single slot, the browser interprets it such that the single slot is
+    applied to all four sides.
+</p>
+<h5 dir="ltr">
+    Units
+</h5>
+<p dir="ltr">
+    When defining properties, units also matter. There are three types:
+    absolute, relative, and viewport.
+</p>
+<p dir="ltr">
+    The most common absolute unit are pixels, or px. However, a sometimes handy
+    unit is em. Em refers to the size of the font of the most inner wrapping
+    element, meaning it grows as the font grows.
+</p>
+<p dir="ltr">
+    The only relative unit is %. It takes a percentage of its parent element.
+    However, it can be tricky sometimes, as the % may refer to different a
+    different parent element than you have thought,
+</p>
+<p dir="ltr">
+    Lastly, viewport units. While relative units are responsive, viewport units
+    are more responsive in the sense that their value changes every time the
+    browser resizes. They’re two common ones: Viewport Height (vh, based on the
+    height of the viewport) and Viewport Width (vw, based on the width of the
+    viewport)
+</p>
+<h3 dir="ltr">
+    Selectors
+</h3>
+<p dir="ltr">
+    You can select elements by id (unique identifiers) with a hash, class
+    (identifiers for multiple elements) preceded by a period, or type of
+    element.
+</p>
+<p dir="ltr">
+    #id
+</p>
+<p dir="ltr">
+    .class
+</p>
+<p dir="ltr">
+    type
+</p>
+<p dir="ltr">
+    Combining selectors without a space selects elements satisfying all
+    combined selectors
+</p>
+<p dir="ltr">
+    Combining selectors with a space selects elements satisfying the later
+    selector descended from the first selector
+</p>
+<p dir="ltr">
+    Separating selectors with commas selects elements satisfying any of the
+    combined selectors.
+</p>
+<p dir="ltr">
+    There are more uncommon selector syntaxes, such as “element&gt;element”
+    (which denotes a parent and their child), “element+element” (which denotes
+    the later element placed immediately after the former), and
+    “element~element” (which denotes the later element preceded by the former).
+</p>
+<div>
+    <br/>
+</div>
+</div>
